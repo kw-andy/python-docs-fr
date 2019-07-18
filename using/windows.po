@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-23 16:48+0200\n"
-"PO-Revision-Date: 2019-02-27 10:08+0100\n"
+"POT-Creation-Date: 2019-06-03 22:10+0200\n"
+"PO-Revision-Date: 2019-06-01 23:40+0200\n"
 "Last-Translator: Jules Lasne <jules.lasne@gmail.com>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr_FR\n"
@@ -397,14 +397,14 @@ msgstr ""
 "Le dossier d'installation par défaut pour des installations juste pour soi"
 
 #: ../Doc/using/windows.rst:154
-#, fuzzy
 msgid ""
 ":file:`%LocalAppData%\\\\\\ Programs\\\\PythonXY` or :file:`%LocalAppData%\\"
 "\\\\ Programs\\\\PythonXY-32` or :file:`%LocalAppData%\\\\\\ Programs\\"
 "\\PythonXY-64`"
 msgstr ""
 ":file:`%LocalAppData%\\\\\\ Programs\\\\PythonXY` ou :file:`%LocalAppData%\\"
-"\\\\ Programs\\\\PythonXY-32`"
+"\\\\ Programs\\\\PythonXY-32` ou :file:`%LocalAppData%\\\\\\ Programs\\"
+"\\PythonXY-64`"
 
 #: ../Doc/using/windows.rst:161
 msgid "DefaultCustomTargetDir"
@@ -1661,7 +1661,6 @@ msgstr ""
 "vous devez utiliser l'une des lignes *shebang* commençant par ``/usr``."
 
 #: ../Doc/using/windows.rst:766
-#, fuzzy
 msgid ""
 "Any of the above virtual commands can be suffixed with an explicit version "
 "(either just the major version, or the major and minor version). Furthermore "
@@ -1671,8 +1670,9 @@ msgid ""
 msgstr ""
 "Les commandes virtuelles ci-dessus peuvent être suffixées avec une version "
 "explicite (soit seulement la version principale, soit la version principale "
-"et mineure) — par exemple ``/usr/bin/python2.7`` — ce qui entraînera "
-"l'utilisation de cette version spécifique."
+"et mineure). De plus la version 32-bit peut être demandée en ajoutant "
+"**-32** après le numéro de version mineur. Par exemple ``/usr/bin/"
+"python2.7-32`` demande d’utiliser la version 32-bit de Python 2.7."
 
 #: ../Doc/using/windows.rst:774
 msgid ""
@@ -1680,6 +1680,10 @@ msgid ""
 "by the \"-64\" suffix. Furthermore it is possible to specify a major and "
 "architecture without minor (i.e. ``/usr/bin/python3-64``)."
 msgstr ""
+"Depuis la version 3.7 du lanceur Python, il est possible de demander une "
+"version *64-bit* en utilisant le suffixe **-64**. De plus il est possible de "
+"spécifier une version majeure et une architecture sans version mineure (par "
+"exemple ``/usr/bin/python3-64``)."
 
 #: ../Doc/using/windows.rst:778
 msgid ""
@@ -1754,7 +1758,6 @@ msgid "Customizing default Python versions"
 msgstr "Personnalisation des versions Python par défaut"
 
 #: ../Doc/using/windows.rst:815
-#, fuzzy
 msgid ""
 "In some cases, a version qualifier can be included in a command to dictate "
 "which version of Python will be used by the command. A version qualifier "
@@ -1767,9 +1770,9 @@ msgstr ""
 "commande pour dicter quelle version de Python sera utilisée par la commande. "
 "Un qualificateur de version commence par un numéro de version majeure et "
 "peut éventuellement être suivi d'un point (``.``) et d'un spécificateur de "
-"version secondaire. Si le qualificatif mineur est spécifié, il peut "
-"éventuellement être suivi de ``-32`` pour forcer l'utilisation d'une version "
-"32 bits."
+"version secondaire. De plus il est possible de préciser si une "
+"implémentation 32 ou 64 bit doit être demandée en ajoutant **-32** ou "
+"**-64**."
 
 #: ../Doc/using/windows.rst:821
 msgid ""
@@ -1781,7 +1784,6 @@ msgstr ""
 "version qui ne spécifie qu'une version majeure."
 
 #: ../Doc/using/windows.rst:824
-#, fuzzy
 msgid ""
 "If no version qualifiers are found in a command, the environment variable :"
 "envvar:`PY_PYTHON` can be set to specify the default version qualifier. If "
@@ -1791,11 +1793,12 @@ msgid ""
 "launcher included with Python 3.7 or newer.)"
 msgstr ""
 "Si aucun qualificateur de version n'est trouvé dans une commande, la "
-"variable d'environnement ``PY_PYTHON`` peut être définie pour spécifier le "
-"qualificateur de version par défaut -- la valeur par défaut est \"2\". Notez "
-"que cette valeur peut spécifier uniquement une version majeure (par exemple "
-"\"2\") ou un qualificatif ``majeur.mineur`` (par ex. \"2.6\"), ou même "
-"``majeur.mineur-32``."
+"variable d'environnement :envvar:`PY_PYTHON` peut être définie pour "
+"spécifier le qualificateur de version par défaut. Si non définie, la valeur "
+"par défaut est ``3``. La variable peut spécifier n’importe quelle valeur qui "
+"peut être passée dans la ligne de commande telle que ``3``, ``3.7``, "
+"``3.7-32`` ou ``3.7-64``. (Notez que l’option **-64** est seulement "
+"disponible avec le lanceur inclus avec Python 3.7 ou plus récent.)"
 
 #: ../Doc/using/windows.rst:831
 msgid ""
@@ -1816,7 +1819,6 @@ msgstr ""
 "probablement la plus récemment installée dans cette famille."
 
 #: ../Doc/using/windows.rst:839
-#, fuzzy
 msgid ""
 "On 64-bit Windows with both 32-bit and 64-bit implementations of the same "
 "(major.minor) Python version installed, the 64-bit version will always be "
@@ -1832,14 +1834,14 @@ msgstr ""
 "Sur Windows 64-bits avec les implémentations 32-bits et 64-bits de la même "
 "version Python (``major.minor``) installée, la version 64-bit est toujours "
 "préférée. Cela est vrai pour les implémentations 32-bits et 64-bits du "
-"lanceur -- un lanceur 32-bits préférera exécuter une installation Python de "
-"64-bits de la version spécifiée si elle est disponible. Le comportement du "
+"lanceur – un lanceur 32-bits préfère exécuter une installation Python de 64-"
+"bits de la version spécifiée si elle est disponible. Le comportement du "
 "lanceur est donc prévisible en sachant seulement quelles versions sont "
 "installées sur le PC et sans tenir compte de l'ordre dans lequel ils ont été "
 "installés (i.e., sans savoir si une version 32 ou 64-bit de Python et le "
 "lanceur correspondant a été installé en dernier). Comme indiqué ci-dessus, "
-"un suffixe optionnel ``-32`` peut être utilisé sur un spécificateur de "
-"version pour modifier ce comportement."
+"un suffixe optionnel ``-32`` ou ``-64`` peut être utilisé sur un "
+"spécificateur de version pour modifier ce comportement."
 
 #: ../Doc/using/windows.rst:850
 msgid "Examples:"
@@ -1991,9 +1993,9 @@ msgstr ""
 "d'environnement sont ignorées, le mode isolé est activé et :mod:`site` n'est "
 "pas importé, sauf si une ligne du fichier spécifie ``import site``. Les "
 "chemins et les lignes vides commençant par ``#`` sont ignorés. Chaque chemin "
-"d'accès peut être absolu ou relatif à l'emplacement du fichier. Les imports "
-"autre que vers *site* ne sont pas autorisés, ni n'importe quelle instruction "
-"Python."
+"d'accès peut être absolu ou relatif à l'emplacement du fichier. Les "
+"importations autres que vers *site* ne sont pas autorisées, ni n'importe "
+"quelle instruction Python."
 
 #: ../Doc/using/windows.rst:931
 msgid ""
@@ -2275,22 +2277,25 @@ msgstr ""
 "inclut les services pour :"
 
 #: ../Doc/using/windows.rst:1046
-msgid "`Component Object Model <https://www.microsoft.com/com/>`_ (COM)"
+#, fuzzy
+msgid ""
+"`Component Object Model <https://docs.microsoft.com/en-us/windows/desktop/"
+"com/component-object-model--com--portal>`_ (COM)"
 msgstr "`Component Object Model <http://www.microsoft.com/com/>`_ (COM)"
 
-#: ../Doc/using/windows.rst:1047
+#: ../Doc/using/windows.rst:1049
 msgid "Win32 API calls"
 msgstr "Appels à l'API Win32"
 
-#: ../Doc/using/windows.rst:1048
+#: ../Doc/using/windows.rst:1050
 msgid "Registry"
 msgstr "Registre"
 
-#: ../Doc/using/windows.rst:1049
+#: ../Doc/using/windows.rst:1051
 msgid "Event log"
 msgstr "Journal d'événement"
 
-#: ../Doc/using/windows.rst:1050
+#: ../Doc/using/windows.rst:1052
 msgid ""
 "`Microsoft Foundation Classes <https://msdn.microsoft.com/en-us/library/"
 "fe1cf721%28VS.80%29.aspx>`_ (MFC) user interfaces"
@@ -2298,7 +2303,7 @@ msgstr ""
 "`Microsoft Foundation Classes <http://msdn.microsoft.com/en-us/library/"
 "fe1cf721%28VS.80%29.aspx>`_ (MFC) interfaces utilisateur"
 
-#: ../Doc/using/windows.rst:1053
+#: ../Doc/using/windows.rst:1055
 msgid ""
 "`PythonWin <https://web.archive.org/web/20060524042422/ https://www.python."
 "org/windows/pythonwin/>`_ is a sample MFC application shipped with PyWin32.  "
@@ -2308,29 +2313,29 @@ msgstr ""
 "windows/pythonwin/>`_ est un exemple d'application MFC livrée avec PyWin32. "
 "Il s'agit d'un IDE embarqué avec débogueur intégré."
 
-#: ../Doc/using/windows.rst:1060
+#: ../Doc/using/windows.rst:1062
 msgid ""
 "`Win32 How Do I...? <http://timgolden.me.uk/python/win32_how_do_i.html>`_"
 msgstr ""
 "`Win32 How Do I...? <http://timgolden.me.uk/python/win32_how_do_i.html>`_"
 
-#: ../Doc/using/windows.rst:1060
+#: ../Doc/using/windows.rst:1062
 msgid "by Tim Golden"
 msgstr "par Tim Golden"
 
-#: ../Doc/using/windows.rst:1062
+#: ../Doc/using/windows.rst:1064
 msgid "`Python and COM <http://www.boddie.org.uk/python/COM.html>`_"
 msgstr "`Python and COM <http://www.boddie.org.uk/python/COM.html>`_"
 
-#: ../Doc/using/windows.rst:1063
+#: ../Doc/using/windows.rst:1065
 msgid "by David and Paul Boddie"
 msgstr "par David et Paul Boddie"
 
-#: ../Doc/using/windows.rst:1067
+#: ../Doc/using/windows.rst:1069
 msgid "cx_Freeze"
 msgstr "cx_Freeze"
 
-#: ../Doc/using/windows.rst:1069
+#: ../Doc/using/windows.rst:1071
 msgid ""
 "`cx_Freeze <https://anthony-tuininga.github.io/cx_Freeze/>`_ is a :mod:"
 "`distutils` extension (see :ref:`extending-distutils`) which wraps Python "
@@ -2344,11 +2349,11 @@ msgstr ""
 "`{*}.exe`). Lorsque vous l'avez fait, vous pouvez distribuer votre "
 "application sans demander à vos utilisateurs d'installer Python."
 
-#: ../Doc/using/windows.rst:1077
+#: ../Doc/using/windows.rst:1079
 msgid "WConio"
 msgstr "WConio"
 
-#: ../Doc/using/windows.rst:1079
+#: ../Doc/using/windows.rst:1081
 msgid ""
 "Since Python's advanced terminal handling layer, :mod:`curses`, is "
 "restricted to Unix-like systems, there is a library exclusive to Windows as "
@@ -2358,7 +2363,7 @@ msgstr ""
 "est limité aux systèmes de type UNIX, il existe une bibliothèque exclusive à "
 "Windows : *Windows Console I/O for Python*."
 
-#: ../Doc/using/windows.rst:1083
+#: ../Doc/using/windows.rst:1085
 msgid ""
 "`WConio <http://newcenturycomputers.net/projects/wconio.html>`_ is a wrapper "
 "for Turbo-C's :file:`CONIO.H`, used to create text user interfaces."
@@ -2367,11 +2372,11 @@ msgstr ""
 "*wrapper* pour les fichiers Turbo-C :file:`CONIO.H`, utilisé pour créer des "
 "interfaces texte utilisateur."
 
-#: ../Doc/using/windows.rst:1089
+#: ../Doc/using/windows.rst:1091
 msgid "Compiling Python on Windows"
 msgstr "Compiler Python sous Windows"
 
-#: ../Doc/using/windows.rst:1091
+#: ../Doc/using/windows.rst:1093
 msgid ""
 "If you want to compile CPython yourself, first thing you should do is get "
 "the `source <https://www.python.org/downloads/source/>`_. You can download "
@@ -2383,7 +2388,7 @@ msgstr ""
 "télécharger soit la source de la dernière version ou tout simplement prendre "
 "un `checkout <https://devguide.python.org/setup/#getting-the-source-code>`_."
 
-#: ../Doc/using/windows.rst:1096
+#: ../Doc/using/windows.rst:1098
 msgid ""
 "The source tree contains a build solution and project files for Microsoft "
 "Visual Studio 2015, which is the compiler used to build the official Python "
@@ -2394,7 +2399,7 @@ msgstr ""
 "pour générer les versions officielles de Python. Ces fichiers se trouvent "
 "dans le répertoire :file:`PCbuild`."
 
-#: ../Doc/using/windows.rst:1100
+#: ../Doc/using/windows.rst:1102
 msgid ""
 "Check :file:`PCbuild/readme.txt` for general information on the build "
 "process."
@@ -2402,11 +2407,11 @@ msgstr ""
 "Consultez :file:`PC/readme.txt` pour des informations générales sur le "
 "processus de construction."
 
-#: ../Doc/using/windows.rst:1103
+#: ../Doc/using/windows.rst:1105
 msgid "For extension modules, consult :ref:`building-on-windows`."
 msgstr "Pour les modules d'extension, consultez :ref:`building-on-windows`."
 
-#: ../Doc/using/windows.rst:1110
+#: ../Doc/using/windows.rst:1112
 msgid ""
 "`Python + Windows + distutils + SWIG + gcc MinGW <http://sebsauvage.net/"
 "python/mingw.html>`_"
@@ -2414,7 +2419,7 @@ msgstr ""
 "`Python + Windows + distutils + SWIG + gcc MinGW <http://sebsauvage.net/"
 "python/mingw.html>`_"
 
-#: ../Doc/using/windows.rst:1108
+#: ../Doc/using/windows.rst:1110
 msgid ""
 "or \"Creating Python extensions in C/C++ with SWIG and compiling them with "
 "MinGW gcc under Windows\" or \"Installing Python extension with distutils "
@@ -2424,23 +2429,18 @@ msgstr ""
 "MinGW gcc under Windows*\" ou \"*Installing Python extension with distutils "
 "and without Microsoft Visual C++*\" par Sébastien Sauvage, 2003"
 
-#: ../Doc/using/windows.rst:1112
-msgid ""
-"`MingW -- Python extensions <http://oldwiki.mingw.org/index.php/Python"
-"%20extensions>`_"
+#: ../Doc/using/windows.rst:1114
+#, fuzzy
+msgid "`MingW -- Python extensions <http://www.mingw.org/wiki/FAQ#toc14>`_"
 msgstr ""
 "`MingW -- Python extensions <http://oldwiki.mingw.org/index.php/Python"
 "%20extensions>`_"
 
-#: ../Doc/using/windows.rst:1113
-msgid "by Trent Apted et al, 2007"
-msgstr "par Trent Apted et al, 2007"
-
-#: ../Doc/using/windows.rst:1117
+#: ../Doc/using/windows.rst:1118
 msgid "Other Platforms"
 msgstr "Autres plateformes"
 
-#: ../Doc/using/windows.rst:1119
+#: ../Doc/using/windows.rst:1120
 msgid ""
 "With ongoing development of Python, some platforms that used to be supported "
 "earlier are no longer supported (due to the lack of users or developers). "
@@ -2451,12 +2451,12 @@ msgstr ""
 "manque d'utilisateurs ou de développeurs). Voir :pep:`11` pour plus de "
 "détails sur toutes les plateformes non prises en charge."
 
-#: ../Doc/using/windows.rst:1123
+#: ../Doc/using/windows.rst:1124
 msgid "`Windows CE <http://pythonce.sourceforge.net/>`_ is still supported."
 msgstr ""
 "`Windows CE <http://pythonce.sourceforge.net/>`_ est toujours pris en charge."
 
-#: ../Doc/using/windows.rst:1124
+#: ../Doc/using/windows.rst:1125
 msgid ""
 "The `Cygwin <https://cygwin.com/>`_ installer offers to install the Python "
 "interpreter as well (cf. `Cygwin package source <ftp://ftp.uni-erlangen.de/"
@@ -2468,7 +2468,7 @@ msgstr ""
 "pub/pc/gnuwin32/cygwin/mirrors/cygnus/ release/Python>`_, `Maintainer "
 "releases <http://www.tishler.net/jason/software/Python/>`_)"
 
-#: ../Doc/using/windows.rst:1130
+#: ../Doc/using/windows.rst:1131
 msgid ""
 "See `Python for Windows <https://www.python.org/downloads/windows/>`_ for "
 "detailed information about platforms with pre-compiled installers."
@@ -2476,6 +2476,9 @@ msgstr ""
 "Voir `Python pour Windows <https://www.python.org/downloads/windows/>`_ pour "
 "des instructions détaillées sur les plateformes avec installateurs pré-"
 "compilés."
+
+#~ msgid "by Trent Apted et al, 2007"
+#~ msgstr "par Trent Apted et al, 2007"
 
 #~ msgid "Installing Python"
 #~ msgstr "Installer Python"

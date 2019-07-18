@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: Python 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-23 16:48+0200\n"
-"PO-Revision-Date: 2019-04-11 20:09+0200\n"
+"PO-Revision-Date: 2019-06-10 15:49+0200\n"
 "Last-Translator: Jules Lasne <jules.lasne@gmail.com>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: ../Doc/library/exceptions.rst:4
 msgid "Built-in Exceptions"
@@ -515,7 +515,7 @@ msgid ""
 msgstr ""
 ":exc:`EnvironmentError`, :exc:`IOError`, :exc:`WindowsError`, :exc:`socket."
 "error`, :exc:`select.error` et :exc:`mmap.error` ont fusionnées en :exc:"
-"`OSError`, et le constructeur peut retourner une sous-classe."
+"`OSError`, et le constructeur peut renvoyer une sous-classe."
 
 #: ../Doc/library/exceptions.rst:313
 msgid ""
@@ -927,9 +927,9 @@ msgid ""
 "blocking operation. Corresponds to :c:data:`errno` ``EAGAIN``, ``EALREADY``, "
 "``EWOULDBLOCK`` and ``EINPROGRESS``."
 msgstr ""
-"Levée lorsqu'une opération bloque sur un objet (e.g. socket) configuré pour "
-"une opération non-bloquante. Correspond à :c:data:`errno` ``EAGAIN``, "
-"``EALREADY``, ``EWOULDBLOCK`` et ``EINPROGRESS``."
+"Levée lorsqu'une opération bloque sur un objet (par exemple un connecteur) "
+"configuré pour une opération non-bloquante. Correspond à :c:data:`errno` "
+"``EAGAIN``, ``EALREADY``, ``EWOULDBLOCK`` et ``EINPROGRESS``."
 
 #: ../Doc/library/exceptions.rst:565
 msgid ""
@@ -979,8 +979,8 @@ msgid ""
 msgstr ""
 "Une sous-classe de :exc:`ConnectionError`, levé en essayant d'écrire sur un "
 "*pipe* alors que l'autre extrémité a été fermée, ou en essayant d'écrire sur "
-"un *socket* qui a été fermé pour l'écriture. Correspond à :c:data:`errno` "
-"``EPIPE`` et ``ESHUTDOWN``."
+"un connecteur (*socket* en anglais) qui a été fermé pour l'écriture. "
+"Correspond à :c:data:`errno` ``EPIPE`` et ``ESHUTDOWN``."
 
 #: ../Doc/library/exceptions.rst:595
 msgid ""
@@ -1124,13 +1124,13 @@ msgstr ""
 "lorsque ces avertissements sont destinés aux autres développeurs Python."
 
 #: ../Doc/library/exceptions.rst:694
-#, fuzzy
 msgid ""
 "Base class for warnings about features which are obsolete and expected to be "
 "deprecated in the future, but are not deprecated at the moment."
 msgstr ""
-"Classe de base pour les avertissements sur les fonctionnalités qui seront "
-"obsolètes dans le futur."
+"Classe de base pour les avertissements d'obsolescence programmée. Ils "
+"indiquent que la fonctionnalité peut encore être utilisée actuellement, mais "
+"qu'elle sera supprimée dans le futur."
 
 #: ../Doc/library/exceptions.rst:698
 msgid ""
@@ -1138,6 +1138,9 @@ msgid ""
 "deprecation is unusual, and :exc:`DeprecationWarning` is preferred for "
 "already active deprecations."
 msgstr ""
+"Cette classe est rarement utilisée car émettre un avertissement à propos "
+"d’une obsolescence à venir est inhabituel, et :exc:`DeprecationWarning` est "
+"préféré pour les obsolescences actuelles."
 
 #: ../Doc/library/exceptions.rst:705
 msgid "Base class for warnings about dubious syntax."
@@ -1162,7 +1165,7 @@ msgstr ""
 msgid "Base class for warnings about probable mistakes in module imports."
 msgstr ""
 "Classe de base pour les avertissements sur des erreurs probables dans les "
-"imports de modules."
+"importations de modules."
 
 #: ../Doc/library/exceptions.rst:726
 msgid "Base class for warnings related to Unicode."

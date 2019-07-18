@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Python 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-23 16:48+0200\n"
-"PO-Revision-Date: 2018-10-04 16:18+0200\n"
+"PO-Revision-Date: 2019-06-19 21:54+0200\n"
 "Last-Translator: Julien Palard <julien@palard.fr>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
@@ -109,9 +109,8 @@ msgstr ""
 "``spammify``, le nom du module peut être juste :file:`spammify.c`.)"
 
 #: ../Doc/extending/extending.rst:58
-#, fuzzy
 msgid "The first two lines of our file can be::"
-msgstr "Les deux premières lignes de notre fichier peuvent être : ::"
+msgstr "Les deux premières lignes de notre fichier peuvent être ::"
 
 #: ../Doc/extending/extending.rst:63
 msgid ""
@@ -428,8 +427,7 @@ msgid ""
 "you usually declare a static object variable at the beginning of your file::"
 msgstr ""
 "Vous pouvez également créer une exception spécifique à votre module. Pour "
-"cela, déclarez simplement une variable statique au début de votre "
-"fichier : ::"
+"cela, déclarez simplement une variable statique au début de votre fichier ::"
 
 #: ../Doc/extending/extending.rst:211
 msgid ""
